@@ -1,0 +1,44 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  /** CSS files from /public/css that this page uses (loaded in this order) */
+  styles?: string[];
+  /** which top-menu item is highlighted: 'projects' | 'resume' | 'about' | 'design' */
+  current?: string;
+  /** extra menu links: [{ href, label }] */
+  navExtra?: { href: string; label: string }[];
+  /** set to false if the page has its own nav markup */
+  showNav?: boolean;
+  /** set to false if the page has its own footer markup */
+  showFooter?: boolean;
+}
+
+const {
+  title,
+  styles = ['/css/style.css'],
+  current,
+  navExtra = [],
+  showNav = true,
+  showFooter = true,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {styles.map((href) => <link rel="stylesheet" href={href} />)}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="icon" type="image/svg+xml" href="/images/Favicon.svg" />
+  </head>
+  <body>
+    {showNav && <Nav current={current} extra={navExtra} />}
+    <slot />
+    {showFooter && <Footer />}
+  </body>
+</html>

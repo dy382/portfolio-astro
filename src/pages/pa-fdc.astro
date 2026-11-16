@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Doyeon Yoo | PA Fabric Discovery Center" styles={["/css/style.css"]} current="projects">
+  <!-- 
+    se=single element (h1, h2, p, img)
+    cs=case study    
+    imgtxt=image text
+    txtimg=text image
+    imgimg=image image
+    imgimgimg = image image image
+    txttxt= text text
+    si=small image
+    pt=prototype
+
+  -->
+  <div class="caseStudy">
+    <h1>PA Fabric Discovery Center</h1>
+    <div class="caseStudy-thumbnail">
+
+      <div class="caseStudy-overview">
+        <h2>OVERVIEW</h2>
+        <p>During my 6-month internship with the Pennsylvania Fabric Discovery Center, I designed an advanced search and comparison 
+          feature enabling the textile engineers to efficiently analyze and compare yarns based on quantitative performance ranges.</p>
+        <p>
+          This solo project reimagines a complex research database into a more intuitive, graph-driven interface.  
+        </p>
+      </div>
+
+
+        <div class="caseStudy-overview-text">
+          <h2>Timeline:</h2>
+          <p>2 Weeks</p>
+          <h2>Programs:</h2>
+          <p>Adobe XD, Adobe Fresco, Teams</p>
+            <ul id = "Roles">
+              <li>UI Design</li>
+              <li>UX Research</li>
+              <li>Project Organizer</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <img class="thumbnail-image" src="/images/kimsDragon/kimsdragon-thumbnail.png">
+  </div>
+
+  <div class="cs se caseStudy-process contain">
+  <hr/>
+    <h2>The Challenge</h2>
+      <p>Without a proper search engine or direct data comparison tools, the original database forced textile engineers to rely on long, 
+        repetitive sorting processes to find yarns that met their criteria. The existing database only allowed individual yarn searches, 
+        making comparison slow and fragmented.</p>
+
+  </div>
+    <div class="cs se caseStudy-process contain">   
+  <hr/>
+  <h2>Research</h2>
+  <p>I began by interviewing textile engineers, the primary users of the database, to understand their workflows and frustrations. 
+    These conversations revealed a strong need for range-based searching and side-by-side yarn comparison.</p>
+
+    <h3>User Pain Points</h3>
+  <div class="txttxt">
+  <p>Information was difficult to locate within the database</p>
+  <p>Comparing yarns required repetitive individual searches</p>  
+  <p>Large datasets felt overwhelming without visual comparison tools</p>
+    </div>
+  </div>
+
+      <div class="cs se caseStudy-process contain">   
+
+        <hr/>
+  <h2>User Persona</h2>
+  <p>For much of our design and audience research, we were able to refer to IDM215 for the information. Here we have Madeline James, who represents the average college student struggling to find an affordable and accessible meal between her busy schedule. </p>
+
+  <img src="/images/kimsDragon/userpersona.png">
+  <p>Her journey map outlines the different stages of her ordering process including her thoughts and motivations behind each action. </p>
+  <img src="/images/kimsDragon/journeymap.png">
+
+
+  <h2>Critical Path</h2>
+  <p>Adjusting the original version to touch up obvious mistakes, we created a basic critical path to showcase the navigation of our main flow. </p>
+  <img src="/images/kimsDragon/CriticalPath.png">
+
+  <h2>Usability Testing</h2>
+  <p>Upon refining the previous prototype, We began a series of usability tests and additional development based on feedback. Here we had three stages of testing: the Alpha, the Beta, and the Final. Every stage included five user interviews conducted with an updated usability test script and core developmental features that were added.</p>
+  <p>As the lead data architect and secondary designer, I was heavily involved in this project's design and research aspects. From the tests, we were able to add microinteractions, transitions between pages, button designs, and more.</p>
+
+  <a href="https://digmstudents.westphal.drexel.edu/~ojk25/idm216/final/" class="viewButton" target="blank"><span>VIEW FINAL</span></a>
+
+
+  <h2>Takeaways</h2>
+
+  <p>This project required me to collaborate with professionals in fields I was unfamiliar with, which pushed me to approach the problem 
+    from an entirely new perspective. I had to learn about mechanical properties that shaped how textile engineers evaluated yarns and 
+    balanced user needs with research accuracy. Through this process, I strengthened my ability to translate complex technical data into 
+    intuitive interfaces and design effectively within existing system constraints. </p>
+  </div>
+</Layout>

@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Doyeon Yoo | Home" styles={["/css/style.css"]}>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">UX/UI Designer</p>
+      <h1>Hello! I'm Doyeon.</h1>
+      <p class="hero-sub">I’m a UI/UX designer passionate about crafting intuitive digital experiences, currently studying at Drexel University.</p>
+    </div>
+    <div class="hero-art">
+      <img src="/images/homepage.png" alt="Jellyfish illustration">
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="projects">
+    <div class="section-head">
+      <h2 class="section-label">Featured Projects</h2>
+      <a href="/projects" class="browse-all">Browse all case studies</a>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- 
+        <a class="project-card" href="/chubb">
+          <span class="thumb"><img src="/images/Chubb/StreamLabs (1400 x 1080 px).png" alt="Streamlabs transfer of ownership thumbnail" loading="lazy"></span>
+          <ul class="tags">
+            <li>Mobile App</li>
+            <li>UX Research</li>
+          </ul>
+          <h3>Transfer of Ownership</h3>
+        </a>
+      -->
+
+        <a class="project-card" href="/lennox-got-lunch">
+          <span class="thumb"><img src="/images/LennoxGotLunch/lennoxgotlunch-thumbnail.png" alt="Lennox Got Lunch thumbnail" loading="lazy"></span>
+          <ul class="tags">
+            <li>Mobile App</li>
+            <li>UX Research</li>
+            <li>Branding</li>
+          </ul>
+          <h3>Lennox Got Lunch</h3>
+        </a>
+
+        <a class="project-card" href="/kims-dragon">
+          <span class="thumb"><img src="/images/kimsDragon/kimsdragon-thumbnail.png" alt="Kim's Dragon thumbnail" loading="lazy"></span>
+          <ul class="tags">
+            <li>Web App</li>
+            <li>UI Design</li>
+            <li>Data Architecture</li>
+          </ul>
+          <h3>Kim's Dragon</h3>
+        </a>
+
+        <a class="project-card" href="/chess-rookie">
+          <span class="thumb"><img src="/images/ChessRookie/thumbnail.png" alt="ChessRookie thumbnail" loading="lazy"></span>
+          <ul class="tags">
+            <li>Product Design</li>
+            <li>UX Research</li>
+          </ul>
+          <h3>ChessRookie</h3>
+        </a>
+
+    </div>
+  </section>
+</Layout>

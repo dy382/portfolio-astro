@@ -1,0 +1,393 @@
+:root {
+  --navy: #36454F;
+  --orange: #CE575A;
+  --green: #2E9E6B;
+  --cream: #FEF9EE;
+  --white: #FFFFFF;
+  --text: #36454F;
+  --muted: #656977;
+  --border: #E5DFD5;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FAF8F4;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 60px 7.5%;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+  color: var(--orange);
+  font-family: monospace;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.brand-board {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  min-width: 0;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.card-title {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Identity */
+
+.identity {
+  grid-column: span 6;
+  grid-row: span 2;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  color: var(--cream);
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.identity .card-title {
+  color: #B9BDCA;
+}
+
+.identity h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.identity .role {
+  color: #D1D2D9;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.identity .website {
+  color: #B9BDCA;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/* Main content cards */
+
+.uvp {
+  grid-column: span 6;
+}
+
+.uvp p {
+  font-size: 18px;
+}
+
+.audience,
+.values {
+  grid-column: span 3;
+}
+
+.challenges,
+.opportunities {
+  grid-column: span 3;
+}
+
+.palette {
+  grid-column: span 6;
+}
+
+.typography,
+.imagery,
+.voice {
+  grid-column: span 3;
+}
+
+.metrics {
+  grid-column: span 6;
+}
+
+.channels {
+  grid-column: span 3;
+}
+
+/* Color palette */
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.swatch-color {
+  height: 52px;
+  margin-bottom: 7px;
+  border-radius: 9px;
+}
+
+.swatch span {
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 11px;
+}
+
+/* Typography */
+
+.font-sample {
+  margin-bottom: 5px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.font-description {
+  font-size: 15px;
+}
+
+/* Imagery and mood */
+
+.mood-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.mood {
+  height: 58px;
+  border-radius: 8px;
+}
+
+.mood-one {
+  background: linear-gradient(135deg, #F3DCC8, #CE575A);
+}
+
+.mood-two {
+  background: linear-gradient(135deg, #5693C6, #36454F);
+}
+
+.mood-three {
+  background: linear-gradient(135deg, #FEF9EE, #DCECE2);
+}
+
+/* Metrics and goals */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.metric strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--orange);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+}
+
+.metric p {
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* Channels */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 40px 5%;
+  }
+
+  .identity {
+    grid-column: span 7;
+  }
+
+  .uvp {
+    grid-column: span 5;
+  }
+
+  .audience,
+  .values,
+  .challenges,
+  .opportunities,
+  .typography,
+  .imagery,
+  .voice,
+  .channels {
+    grid-column: span 4;
+  }
+
+  .palette,
+  .metrics {
+    grid-column: span 8;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .container {
+    padding: 28px 16px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .brand-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 13px;
+  }
+
+  .identity,
+  .uvp,
+  .palette,
+  .metrics {
+    grid-column: 1 / -1;
+  }
+
+  .identity {
+    min-height: 245px;
+  }
+
+  .identity h1 {
+    font-size: 42px;
+  }
+
+  .identity .role {
+    font-size: 16px;
+  }
+
+  .uvp p {
+    font-size: 16px;
+  }
+
+  .audience,
+  .values,
+  .challenges,
+  .opportunities,
+  .typography,
+  .imagery,
+  .voice,
+  .channels {
+    grid-column: span 1;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .swatch-color {
+    height: 40px;
+  }
+
+  .swatch span {
+    font-size: 9px;
+  }
+
+  .font-sample {
+    font-size: 24px;
+  }
+
+  .metrics-grid {
+    gap: 10px;
+  }
+
+  .metric strong {
+    font-size: 18px;
+  }
+
+  .metric p {
+    font-size: 12px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-board {
+    grid-template-columns: 1fr;
+  }
+
+  .identity,
+  .uvp,
+  .palette,
+  .metrics,
+  .audience,
+  .values,
+  .challenges,
+  .opportunities,
+  .typography,
+  .imagery,
+  .voice,
+  .channels {
+    grid-column: 1 / -1;
+  }
+}
